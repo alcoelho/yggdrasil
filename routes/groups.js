@@ -32,16 +32,17 @@ router.get('/:id/projects', function(req, res, next) {
     }
     res.json(result)
   });
-  // gitlab.groups.all(function(groups) {
-  //     for (var i = 0; i < groups.length; i++) {
-  //       if (i == 0) console.log(groups[i])
-  //         result[i] = groups[i]
-  //         // console.log(result[i].id, result[i].name)
-  //         // console.log("#" + groups[i].id + ": " + groups[i].name + ", path: " + groups[i].path + ", default_branch: " + groups[i].default_branch + ", private: " + groups[i]["private"] + ", owner: " + groups[i].owner.name + " (" + groups[i].owner.email + "), date: " + groups[i].created_at);
-  //     }
-  //     res.json(result)
-  // });
-  // res.json([{"id": "teste", "name": "teste"}]);
+});
+
+router.get('/:id/users', function(req, res, next) {
+  result = []
+  request.get(GITLAB_URL + "/groups/" + req.params.id + "/members?private_token=" + process.env.gitlab_token, {}, function(error, response, body) {
+    users = JSON.parse(body)
+    for (user in users) {
+      result.push(users[user])
+    }
+    res.json(result)
+  });
 });
 
 module.exports = router;

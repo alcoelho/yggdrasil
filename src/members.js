@@ -2,10 +2,8 @@ import React from 'react';
 import './members.css';
 
 const Members = () => (
-
 	<div className="members">
 		<div className="members-title">Membros</div>
-
 		<div className="member-icons">
 			<img className="member-icon" src="https://pm1.narvii.com/6403/61c61e34438f12c351fd23d2191e0defbb7fc705_hq.jpg"/>
 			<img className="member-icon" src="https://78.media.tumblr.com/66472eb1568926e46c134f66af731ea3/tumblr_inline_nd1sbdelFY1rfrffw.jpg"/>

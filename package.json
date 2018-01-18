@@ -21,6 +21,7 @@
     "node-gitlab": "^1.6.0",
     "path": "^0.12.7",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
     "react-router": "1.0.1",
     "react-scripts": "1.1.0",

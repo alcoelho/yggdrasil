@@ -1,3 +1,0 @@
-# yggdrasil
-
-Read the makefile

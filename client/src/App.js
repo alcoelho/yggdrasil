@@ -6,27 +6,9 @@ import {
 } from 'react-router-dom'
 import Home from './Home.js';
 import Projects from './Projects.js';
-
-class Users extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
-
-  render() {
-    return (
-      <div className="Users">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
-    );
-  }
-}
+import Users from './Users.js';
+import Groups from './Groups.js';
+import ProjectsByGroups from './ProjectsByGroups.js';
 
 const Main = () => {
   return (
@@ -36,12 +18,15 @@ const Main = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/users">Users</Link></li>
         <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/groups">Groups</Link></li>
       </ul>
 
       <hr/>
       <Route exact path="/" component={Home}/>
-      <Route path="/users" component={Users}/>
-      <Route path="/projects" component={Projects}/>
+      <Route exact path="/users" component={Users}/>
+      <Route exact path="/projects" component={Projects}/>
+      <Route exact path="/groups" component={Groups}/>
+      <Route exact path="/groups/:id/projects" component={ProjectsByGroups}/>
     </div>
   </Router>
   );

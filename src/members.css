@@ -3,7 +3,7 @@
 }
 
 .members-title {
-	margin-left: 10px;
+	margin-left: 23px;
 	margin-top: 20px;
 	font-size: 20px;
 	font-weight: 500;
@@ -20,6 +20,7 @@
 }
 
 .member-icons {
+	margin-left: 13px;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 30px;
 }

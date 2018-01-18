@@ -1,0 +1,25 @@
+.members {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+
+.members-title {
+	margin-left: 10px;
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #333;
+}
+
+.member-icons img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.member-icons {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

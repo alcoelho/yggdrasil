@@ -5,7 +5,7 @@
 .contact-title {
 	margin-left: 23px;
 	margin-top: 20px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #333;
 }
@@ -27,6 +27,7 @@ a:link {
 	text-decoration: none;
 	color: #337ab7;
 	margin-left: 3px;
+	font-size: 14px;
 }
 
 a:visited {

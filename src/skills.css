@@ -6,7 +6,7 @@
 .skills-title {
 	margin-left: 23px;
 	margin-top: 20px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 500;
 	color: #333;
 }
@@ -23,4 +23,5 @@
 	color: #333;
 	display: inline-block;
 	margin: 5px;
+	font-size: 14px;
 }

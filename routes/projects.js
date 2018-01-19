@@ -10,7 +10,8 @@ router.get('/', function(req, res, next) {
     gitlab.projects.all(function(projects) {
         for (var i = 0; i < projects.length; i++) {
             result[i] = projects[i]
-            // console.log(result[i].id, result[i].name)
+            if (i == 0)
+                console.log(result[i])
             // console.log("#" + projects[i].id + ": " + projects[i].name + ", path: " + projects[i].path + ", default_branch: " + projects[i].default_branch + ", private: " + projects[i]["private"] + ", owner: " + projects[i].owner.name + " (" + projects[i].owner.email + "), date: " + projects[i].created_at);
         }
         res.json(result)

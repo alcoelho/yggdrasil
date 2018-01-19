@@ -1,43 +1,35 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './projects.css';
 
+// const Projects = () => (
 class Projects extends Component {
-  state = {projects: []}
+	state = {projects: []}
 
-  componentDidMount() {
-    fetch('/projects')
-      .then(res => res.json())
-      .then(projects => this.setState({ projects }));
-  }
+	componentDidMount() {
+		fetch('/groups/219/projects')
+		.then(res => res.json())
+		.then(projects => this.setState({projects: projects}))
+	}
 
-  render() {
-    return (
-      <div className="Projects">
-        <h1>Projects</h1>
-        {this.state.projects.map(project =>
-          <div key={project.id}>{project.name}</div>
-        )}
-      </div>
-    );
-  }
-  // state = {projects: []}
+	render() {
+		return (
+			<section className="projects-container">
+				<div className="projects-title">Projetos</div>
+				<div className="gohorse">go horse</div>
+				<ul className="projects-list">
+					{
+					this.state.projects.map(project =>
+					<li className="projects-item">
+						<a href={project.web_url}>{project.description || project.name}</a>
+						<p>Autor: {project.namespace && project.namespace.name}</p>
+						<p>Mensagem do commit: </p>
 
-  // componentDidMount() {
-  //   fetch('/projects')
-  //     .then(res => res.json())
-  //     .then(projects => this.setState({ projects }));
-  // }
-
-  // render() {
-  //   return (
-  //     <div className="Projects">
-  //       <h1>Projects</h1>
-  //       {this.state.projects.map(project =>
-  //         <div key={project.id}>{project.name}</div>
-  //       )}
-  //     </div>
-  //   );
-  // }  
+						<p>Commitado em: {project.last_activity_at}</p>
+					</li>
+					)}
+				</ul>
+			</section>
+		);
+	}
 }
-
-export default Projects
+export default Projects;

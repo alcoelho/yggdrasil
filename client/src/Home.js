@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import './Home.css';
+import React from 'react';
+import './home.css';
+import Sidebar from './sidebar.js'
+import Projects from './projects.js';
 
-class Home extends Component {
 
-    render() {
-      return (
-        <div className="Home">
-          <h1>Home</h1>
-        </div>
-      );
-    }
-    
-}
+const Home = () => (
+  	<section className="home">
+    	<Sidebar />
+    	<Projects />
+    </section>
+)
 
-export default Home
+export default Home;

@@ -15,7 +15,7 @@ const Contact = () => (
 			</li>
 			<li className="contact-item">
 				<img className="contact-icon" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png"/>
-				<a href="http://www.google.com">GitHub</a>
+				<a href="http://www.google.com">Slack</a>
 			</li>
 		</ul>
 	</section>

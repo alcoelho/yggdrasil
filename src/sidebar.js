@@ -5,9 +5,11 @@ import Skills from './skills.js';
 import Contact from './contact.js';
 import './sidebar.css';
 
-const Sidebar = () => (
+const teamProps = {teamName: "Wildcats"}
+
+const Sidebar = ({teamProps}) => (
 		<section className="sidebar">
-			<TeamInfo />
+			<TeamInfo props={teamProps}/>
 			<Members />
 			<Skills />
 			<Contact />

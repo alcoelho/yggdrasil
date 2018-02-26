@@ -4,9 +4,9 @@ import Sidebar from './sidebar.js'
 import Projects from './projects.js';
 
 
-const Home = () => (
+const Home = ({teamProps}) => (
   	<section className="home">
-    	<Sidebar />
+    	<Sidebar teamProps={teamProps} />
     	<Projects />
     </section>
 )
